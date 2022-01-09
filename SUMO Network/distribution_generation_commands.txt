@@ -1,0 +1,4 @@
+python createVehTypeDistribution.py config_conservative.txt --name conservative --output-file distribution_conservative.add.xml --size 20
+python createVehTypeDistribution.py config_moderate.txt --name moderate --output-file distribution_moderate.add.xml --size 20
+python createVehTypeDistribution.py config_aggressive.txt --name aggressive --output-file distribution_aggressive.add.xml --size 20
+python createVehTypeDistribution.py config_manual.txt --name manual --output-file distribution_manual.add.xml --size 20

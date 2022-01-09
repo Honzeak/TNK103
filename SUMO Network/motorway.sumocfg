@@ -1,0 +1,20 @@
+<configuration>
+	<input>
+		<net-file value="motorway.net.xml"/>
+		<route-files value="flows.rou.xml"/>
+		<begin value="0"/>
+		<end value="200000000"/>
+	</input>
+
+	<time>
+		<step-length value="0.1" />
+	</time>
+
+	<additional>
+	</additional>
+		<additional-files value="edgedata.add.xml,detectors.add.xml, distributions/distribution_manual.add.xml, distributions/distribution_aggressive.add.xml, distributions/distribution_moderate.add.xml, distributions/distribution_conservative.add.xml, distributions/LV1800.add.xml "/>
+	
+	<processing>
+  		 <step-method.ballistic value="true"/>
+	</processing>
+</configuration>

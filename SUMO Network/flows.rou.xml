@@ -1,0 +1,21 @@
+<routes>
+	
+
+	<flow id="carflow_manual" type="LV1800" beg="0" end="3900" vehsPerHour="481" from="1" to="9" departLane="best" color="#ffffff" departSpeed="speedLimit" />
+	<flow id="carflow_offRamp_manual" type="LV1800" beg="0" end="3900" vehsPerHour="121" from="1" to="2" departLane="best" color="#ffffff" departSpeed="speedLimit" />
+	<flow id="carflow_onRamp_manual" type="LV1800" beg="0" end="3900" vehsPerHour="151" from="8" to="9" departLane="best" color="#ffffff" departSpeed="speedLimit" />
+
+	
+	<flow id="carflow" type="conservative" beg="0" end="3900" vehsPerHour="1120" from="1" to="9" departLane="best" color="#c11144" departSpeed="speedLimit">
+		<param key="device.toc.automatedType" value="conservative" />
+        <param key="device.toc.manualType" value="LV1800" />		
+	</flow>
+	<flow id="carflow_offRamp" type="conservative" beg="0" end="3900" vehsPerHour="280" from="1" to="2" departLane="best" color="#c11144" departSpeed="speedLimit">
+		<param key="device.toc.automatedType" value="conservative" />
+        <param key="device.toc.manualType" value="LV1800" />	
+	</flow>
+	<flow id="carflow_onRamp" type="conservative" beg="0" end="3900" vehsPerHour="351" from="8" to="9" departLane="best" color="#c11144" departSpeed="speedLimit">
+		<param key="device.toc.automatedType" value="conservative" />
+        <param key="device.toc.manualType" value="LV1800" />	
+	</flow>
+</routes>

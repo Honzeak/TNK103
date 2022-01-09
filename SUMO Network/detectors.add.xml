@@ -1,0 +1,19 @@
+<additional>
+  <inductionLoop id="Loop_L6_0" lane="6_0" pos="8.89" freq="10" file="output/outputLoop_L6.xml"/>
+  <inductionLoop id="Loop_L6_1" lane="6_1" pos="8.89" freq="10" file="output/outputLoop_L6.xml"/>
+ 
+ <inductionLoop id="Loop_L4_OffRamp" lane="4_0" pos="219" freq="10" file="output/outputLoop_L4.xml"/>
+ <inductionLoop id="Loop_L4_1" lane="4_1" pos="219" freq="10" file="output/outputLoop_L4.xml"/>
+ <inductionLoop id="Loop_L4_2" lane="4_2" pos="219" freq="10" file="output/outputLoop_L4.xml"/>
+
+ <inductionLoop id="Loop_L10005_0" lane="10005_0" pos="8.3" freq="10" file="output/outputLoop_L10005.xml"/>
+ <inductionLoop id="Loop_L10005_1" lane="10005_1" pos="8.3" freq="10" file="output/outputLoop_L10005.xml"/>
+ 
+ <inductionLoop id="Loop_L10_offRamp" lane="10_0" pos="0.1" freq="10" file="output/outputLoop_L10.xml"/>
+ <inductionLoop id="Loop_L10_1" lane="10_1" pos="0.1" freq="10" file="output/outputLoop_L10.xml"/> 
+ <inductionLoop id="Loop_L10_2" lane="10_2" pos="0.1" freq="10" file="output/outputLoop_L10.xml"/>
+
+ <inductionLoop id="Loop_L10008_0" lane="10008_0" pos="0.5" freq="10" file="output/outputLoop_L10008.xml"/>
+ <inductionLoop id="Loop_L10008_1" lane="10008_1" pos="0.5" freq="10" file="output/outputLoop_L10008.xml"/> 
+
+</additional>

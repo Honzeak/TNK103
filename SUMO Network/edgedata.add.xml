@@ -1,0 +1,3 @@
+<additional>
+	<edgeData id="vehData" file="output/output_linkData_vehs.xml" begin="300" end="3900" excludeEmpty="false"/>
+</additional>
