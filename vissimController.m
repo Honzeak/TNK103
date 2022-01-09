@@ -39,6 +39,7 @@ set(Vissim.Evaluation, 'AttValue', 'QueuesCollectData', false);
 set(Vissim.Evaluation, 'AttValue', 'VehTravTmsCollectData', false);
 set(Vissim.Evaluation, 'AttValue', 'VehClasses', '10,101');
 
+
 % Activate QuickMode:
 set(Vissim.Graphics.CurrentNetworkWindow, 'AttValue', 'QuickMode', 1)
 Vissim.SuspendUpdateGUI; %  stop updating of the complete Vissim workspace (network editor, list, chart and signal time table windows)
@@ -80,8 +81,8 @@ for typecek = 1:5
             if flou == 1
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 800; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 1300; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 1 : 10
@@ -128,8 +129,8 @@ for typecek = 1:5
             if flou == 2
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1200; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 2000; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 11 : 20
@@ -176,8 +177,8 @@ for typecek = 1:5
             if flou == 3
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1600; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 2700; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 21 : 30
@@ -228,9 +229,9 @@ for typecek = 1:5
         Veh_composition_number = 1;
         Rel_Flows = Vissim.Net.VehicleCompositions.ItemByKey(Veh_composition_number).VehCompRelFlows.GetAll;
         set(Rel_Flows{1}, 'AttValue', 'VehType',        100); % Changing the vehicle type
-        set(Rel_Flows{1}, 'AttValue', 'RelFlow',        0.75); % Changing the relative flow
+        set(Rel_Flows{1}, 'AttValue', 'RelFlow',        0.85); % Changing the relative flow
         set(Rel_Flows{2}, 'AttValue', 'VehType',        1001);
-        set(Rel_Flows{2}, 'AttValue', 'RelFlow',        0.25); % Changing the relative flow of the 2nd Relative Flow.
+        set(Rel_Flows{2}, 'AttValue', 'RelFlow',        0.15); % Changing the relative flow of the 2nd Relative Flow.
         set(Rel_Flows{3}, 'AttValue', 'VehType',        1002);
         set(Rel_Flows{3}, 'AttValue', 'RelFlow',        0.001)
         set(Rel_Flows{4}, 'AttValue', 'VehType',        1003);
@@ -240,8 +241,8 @@ for typecek = 1:5
             if flou == 1
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 800; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 1300; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 31 : 40
@@ -287,8 +288,8 @@ for typecek = 1:5
             if flou == 2
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1200; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 2000; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 41 : 50
@@ -334,8 +335,8 @@ for typecek = 1:5
             if flou == 3
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1600; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 2700; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 51 : 60
@@ -386,9 +387,9 @@ for typecek = 1:5
         Veh_composition_number = 1;
         Rel_Flows = Vissim.Net.VehicleCompositions.ItemByKey(Veh_composition_number).VehCompRelFlows.GetAll;
         set(Rel_Flows{1}, 'AttValue', 'VehType',        100); % Changing the vehicle type
-        set(Rel_Flows{1}, 'AttValue', 'RelFlow',        0.5); % Changing the relative flow
+        set(Rel_Flows{1}, 'AttValue', 'RelFlow',        0.55); % Changing the relative flow
         set(Rel_Flows{2}, 'AttValue', 'VehType',        1001);
-        set(Rel_Flows{2}, 'AttValue', 'RelFlow',        0.5); % Changing the relative flow of the 2nd Relative Flow.
+        set(Rel_Flows{2}, 'AttValue', 'RelFlow',        0.45); % Changing the relative flow of the 2nd Relative Flow.
         set(Rel_Flows{3}, 'AttValue', 'VehType',        1002);
         set(Rel_Flows{3}, 'AttValue', 'RelFlow',        0.001)
         set(Rel_Flows{4}, 'AttValue', 'VehType',        1003);
@@ -398,8 +399,8 @@ for typecek = 1:5
             if flou == 1
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 800; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 1300; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 61 : 70
@@ -445,8 +446,8 @@ for typecek = 1:5
             if flou == 2
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1200; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 2000; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 71 : 80
@@ -492,8 +493,8 @@ for typecek = 1:5
             if flou == 3
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1600; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 2700; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 81 : 90
@@ -544,9 +545,9 @@ for typecek = 1:5
         Veh_composition_number = 1;
         Rel_Flows = Vissim.Net.VehicleCompositions.ItemByKey(Veh_composition_number).VehCompRelFlows.GetAll;
         set(Rel_Flows{1}, 'AttValue', 'VehType',        100); % Changing the vehicle type
-        set(Rel_Flows{1}, 'AttValue', 'RelFlow',        0.25); % Changing the relative flow
+        set(Rel_Flows{1}, 'AttValue', 'RelFlow',        0.30); % Changing the relative flow
         set(Rel_Flows{2}, 'AttValue', 'VehType',        1001);
-        set(Rel_Flows{2}, 'AttValue', 'RelFlow',        0.75); % Changing the relative flow of the 2nd Relative Flow.
+        set(Rel_Flows{2}, 'AttValue', 'RelFlow',        0.70); % Changing the relative flow of the 2nd Relative Flow.
         set(Rel_Flows{3}, 'AttValue', 'VehType',        1002);
         set(Rel_Flows{3}, 'AttValue', 'RelFlow',        0.001)
         set(Rel_Flows{4}, 'AttValue', 'VehType',        1003);
@@ -556,8 +557,8 @@ for typecek = 1:5
             if flou == 1
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 800; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 1300; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 91 : 100
@@ -603,8 +604,8 @@ for typecek = 1:5
             if flou == 2
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1200; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 2000; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 101 : 110
@@ -650,8 +651,8 @@ for typecek = 1:5
             if flou == 3
                 VI_number   = 1; % VI = Vehicle Input
                 VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1600; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+                new_volume  = 2700; % vehicles per hour
+                new_volume_ramp  = 500; % vehicles per hour
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
                 for cnt_Sim = 111 : 120
@@ -698,161 +699,161 @@ for typecek = 1:5
     
 %next
     
-    if typecek == 5
-        Veh_composition_number = 1;
-        Rel_Flows = Vissim.Net.VehicleCompositions.ItemByKey(Veh_composition_number).VehCompRelFlows.GetAll;
-        set(Rel_Flows{1}, 'AttValue', 'VehType',        100); % Changing the vehicle type
-        set(Rel_Flows{1}, 'AttValue', 'RelFlow',        0.001); % Changing the relative flow
-        set(Rel_Flows{2}, 'AttValue', 'VehType',        1001);
-        set(Rel_Flows{2}, 'AttValue', 'RelFlow',        1); % Changing the relative flow of the 2nd Relative Flow.
-        set(Rel_Flows{3}, 'AttValue', 'VehType',        1002);
-        set(Rel_Flows{3}, 'AttValue', 'RelFlow',        0.001)
-        set(Rel_Flows{4}, 'AttValue', 'VehType',        1003);
-        set(Rel_Flows{4}, 'AttValue', 'RelFlow',        0.001)
-        
-        for flou = 1:3
-            if flou == 1
-                VI_number   = 1; % VI = Vehicle Input
-                VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 800; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
-                set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
-                set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
-                for cnt_Sim = 121 : 130
-                    set(Vissim.Simulation, 'AttValue', 'RandSeed', cnt_Sim);
-                    set(Vissim.Simulation, 'AttValue', 'RandSeedIncr', 253);
-                    Vissim.Simulation.RunContinuous;
-                    Veh_TTT_measurement = Vissim.Net.VehicleNetworkPerformanceMeasurement; 
-                    TTTmat_all(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
-                    SpeedAvgmat_all(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
-                    TTTmat_typ5(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
-                    SpeedAvgmat_typ5(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
-                    for DC_measurement_number = 200:100:600
-                        DC_measurement = Vissim.Net.DataCollectionMeasurements.ItemByKey(DC_measurement_number);
-                        
-                        if DC_measurement_number == 200
-                            Vehs_det200(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 300
-                            Vehs_det300(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 400
-                            Vehs_det400(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 500
-                            Vehs_det500(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 600
-                            Vehs_det600(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        Vehs_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        Occup_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'OccupRate(Current,Last,All)'); % Occupancy
-                        Arith_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgArith(Current,Last,All)'); % Avg Artihmetic Speed of vehicles
-                        Harm_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgHarm(Current,Last,All)'); % Avg Harmonic Speed of vehicles
-                    end
-                end
-            end
-
-            if flou == 2
-                VI_number   = 1; % VI = Vehicle Input
-                VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1200; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
-                set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
-                set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
-                for cnt_Sim = 131 : 140
-                    set(Vissim.Simulation, 'AttValue', 'RandSeed', cnt_Sim);
-                    set(Vissim.Simulation, 'AttValue', 'RandSeedIncr', 700);
-                    Vissim.Simulation.RunContinuous;
-                    Veh_TTT_measurement = Vissim.Net.VehicleNetworkPerformanceMeasurement; 
-                    TTTmat_all(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
-                    SpeedAvgmat_all(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
-                    TTTmat_typ5(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
-                    SpeedAvgmat_typ5(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
-                    for DC_measurement_number = 200:100:600
-                        DC_measurement = Vissim.Net.DataCollectionMeasurements.ItemByKey(DC_measurement_number);
-                        
-                        if DC_measurement_number == 200
-                            Vehs_det200(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 300
-                            Vehs_det300(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 400
-                            Vehs_det400(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 500
-                            Vehs_det500(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 600
-                            Vehs_det600(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        Vehs_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        Occup_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'OccupRate(Current,Last,All)'); % Occupancy
-                        Arith_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgArith(Current,Last,All)'); % Avg Artihmetic Speed of vehicles
-                        Harm_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgHarm(Current,Last,All)'); % Avg Harmonic Speed of vehicles
-                    end
-                end
-            end
-
-            if flou == 3
-                VI_number   = 1; % VI = Vehicle Input
-                VI_number_ramp   = 2; % VI = Vehicle Input
-                new_volume  = 1600; % vehicles per hour
-                new_volume_ramp  = 0.4*new_volume; % vehicles per hour
-                set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
-                set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
-                for cnt_Sim = 141 : 150
-                    set(Vissim.Simulation, 'AttValue', 'RandSeed', cnt_Sim);
-                    set(Vissim.Simulation, 'AttValue', 'RandSeedIncr', 400);
-                    Vissim.Simulation.RunContinuous;
-                    Veh_TTT_measurement = Vissim.Net.VehicleNetworkPerformanceMeasurement; 
-                    TTTmat_all(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
-                    SpeedAvgmat_all(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
-                    TTTmat_typ5(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
-                    SpeedAvgmat_typ5(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
-                    for DC_measurement_number = 200:100:600
-                        DC_measurement = Vissim.Net.DataCollectionMeasurements.ItemByKey(DC_measurement_number);
-                        
-                        if DC_measurement_number == 200
-                            Vehs_det200(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 300
-                            Vehs_det300(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 400
-                            Vehs_det400(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 500
-                            Vehs_det500(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        if DC_measurement_number == 600
-                            Vehs_det600(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        end
-                        
-                        Vehs_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
-                        Occup_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'OccupRate(Current,Last,All)'); % Occupancy
-                        Arith_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgArith(Current,Last,All)'); % Avg Artihmetic Speed of vehicles
-                        Harm_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgHarm(Current,Last,All)'); % Avg Harmonic Speed of vehicles
-                    end
-                end
-            end
-        end
-    end
+%     if typecek == 5
+%         Veh_composition_number = 1;
+%         Rel_Flows = Vissim.Net.VehicleCompositions.ItemByKey(Veh_composition_number).VehCompRelFlows.GetAll;
+%         set(Rel_Flows{1}, 'AttValue', 'VehType',        100); % Changing the vehicle type
+%         set(Rel_Flows{1}, 'AttValue', 'RelFlow',        0.001); % Changing the relative flow
+%         set(Rel_Flows{2}, 'AttValue', 'VehType',        1001);
+%         set(Rel_Flows{2}, 'AttValue', 'RelFlow',        1); % Changing the relative flow of the 2nd Relative Flow.
+%         set(Rel_Flows{3}, 'AttValue', 'VehType',        1002);
+%         set(Rel_Flows{3}, 'AttValue', 'RelFlow',        0.001)
+%         set(Rel_Flows{4}, 'AttValue', 'VehType',        1003);
+%         set(Rel_Flows{4}, 'AttValue', 'RelFlow',        0.001)
+%         
+%         for flou = 1:3
+%             if flou == 1
+%                 VI_number   = 1; % VI = Vehicle Input
+%                 VI_number_ramp   = 2; % VI = Vehicle Input
+%                 new_volume  = 800; % vehicles per hour
+%                 new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+%                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
+%                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
+%                 for cnt_Sim = 121 : 130
+%                     set(Vissim.Simulation, 'AttValue', 'RandSeed', cnt_Sim);
+%                     set(Vissim.Simulation, 'AttValue', 'RandSeedIncr', 253);
+%                     Vissim.Simulation.RunContinuous;
+%                     Veh_TTT_measurement = Vissim.Net.VehicleNetworkPerformanceMeasurement; 
+%                     TTTmat_all(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
+%                     SpeedAvgmat_all(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
+%                     TTTmat_typ5(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
+%                     SpeedAvgmat_typ5(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
+%                     for DC_measurement_number = 200:100:600
+%                         DC_measurement = Vissim.Net.DataCollectionMeasurements.ItemByKey(DC_measurement_number);
+%                         
+%                         if DC_measurement_number == 200
+%                             Vehs_det200(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 300
+%                             Vehs_det300(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 400
+%                             Vehs_det400(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 500
+%                             Vehs_det500(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 600
+%                             Vehs_det600(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         Vehs_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         Occup_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'OccupRate(Current,Last,All)'); % Occupancy
+%                         Arith_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgArith(Current,Last,All)'); % Avg Artihmetic Speed of vehicles
+%                         Harm_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgHarm(Current,Last,All)'); % Avg Harmonic Speed of vehicles
+%                     end
+%                 end
+%             end
+% 
+%             if flou == 2
+%                 VI_number   = 1; % VI = Vehicle Input
+%                 VI_number_ramp   = 2; % VI = Vehicle Input
+%                 new_volume  = 1200; % vehicles per hour
+%                 new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+%                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
+%                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
+%                 for cnt_Sim = 131 : 140
+%                     set(Vissim.Simulation, 'AttValue', 'RandSeed', cnt_Sim);
+%                     set(Vissim.Simulation, 'AttValue', 'RandSeedIncr', 700);
+%                     Vissim.Simulation.RunContinuous;
+%                     Veh_TTT_measurement = Vissim.Net.VehicleNetworkPerformanceMeasurement; 
+%                     TTTmat_all(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
+%                     SpeedAvgmat_all(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
+%                     TTTmat_typ5(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
+%                     SpeedAvgmat_typ5(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
+%                     for DC_measurement_number = 200:100:600
+%                         DC_measurement = Vissim.Net.DataCollectionMeasurements.ItemByKey(DC_measurement_number);
+%                         
+%                         if DC_measurement_number == 200
+%                             Vehs_det200(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 300
+%                             Vehs_det300(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 400
+%                             Vehs_det400(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 500
+%                             Vehs_det500(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 600
+%                             Vehs_det600(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         Vehs_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         Occup_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'OccupRate(Current,Last,All)'); % Occupancy
+%                         Arith_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgArith(Current,Last,All)'); % Avg Artihmetic Speed of vehicles
+%                         Harm_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgHarm(Current,Last,All)'); % Avg Harmonic Speed of vehicles
+%                     end
+%                 end
+%             end
+% 
+%             if flou == 3
+%                 VI_number   = 1; % VI = Vehicle Input
+%                 VI_number_ramp   = 2; % VI = Vehicle Input
+%                 new_volume  = 1600; % vehicles per hour
+%                 new_volume_ramp  = 0.4*new_volume; % vehicles per hour
+%                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number), 'AttValue', 'Volume(1)', new_volume);
+%                 set(Vissim.Net.VehicleInputs.ItemByKey(VI_number_ramp), 'AttValue', 'Volume(1)', new_volume_ramp);
+%                 for cnt_Sim = 141 : 150
+%                     set(Vissim.Simulation, 'AttValue', 'RandSeed', cnt_Sim);
+%                     set(Vissim.Simulation, 'AttValue', 'RandSeedIncr', 400);
+%                     Vissim.Simulation.RunContinuous;
+%                     Veh_TTT_measurement = Vissim.Net.VehicleNetworkPerformanceMeasurement; 
+%                     TTTmat_all(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
+%                     SpeedAvgmat_all(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
+%                     TTTmat_typ5(cnt_Sim,flou) = [Veh_TTT_measurement.get('AttValue', 'TravTmTot(Current,Last,All)')];
+%                     SpeedAvgmat_typ5(cnt_Sim,flou) = [get(Veh_TTT_measurement, 'AttValue', 'SpeedAvg(Current,Last,All)')];
+%                     for DC_measurement_number = 200:100:600
+%                         DC_measurement = Vissim.Net.DataCollectionMeasurements.ItemByKey(DC_measurement_number);
+%                         
+%                         if DC_measurement_number == 200
+%                             Vehs_det200(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 300
+%                             Vehs_det300(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 400
+%                             Vehs_det400(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 500
+%                             Vehs_det500(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         if DC_measurement_number == 600
+%                             Vehs_det600(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         end
+%                         
+%                         Vehs_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'Vehs(Current,Last,All)'); % No of vehicles in simulation in curr interval
+%                         Occup_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'OccupRate(Current,Last,All)'); % Occupancy
+%                         Arith_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgArith(Current,Last,All)'); % Avg Artihmetic Speed of vehicles
+%                         Harm_Speed_all(cnt_Sim,flou) = get(DC_measurement, 'AttValue', 'SpeedAvgHarm(Current,Last,All)'); % Avg Harmonic Speed of vehicles
+%                     end
+%                 end
+%             end
+%         end
+%     end
 
 end
 Vissim.ResumeUpdateGUI; % allow updating of the complete Vissim workspace (network editor, list, chart and signal time table windows)
